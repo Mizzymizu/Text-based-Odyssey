@@ -1,0 +1,23 @@
+{
+  "name": "text-based-odyssey",
+  "version": "1.0.0",
+  "description": "Welcome to Rust and Redemption: A Text-Based Oddyssey. This is a text-based adventure game that is played in the terminal. The game is a choose-your-own-adventure style game where the player is given a scenario and must choose from a list of options. The player's choices will affect the outcome of the game. The game is set in a post-apocalyptic world where the player must survive and make it to the end of the game. The game is written using MVC architecture such as Handlebars, Express, and Node.js.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.1",
+    "sequelize": "^6.33.0"
+  }
+}
