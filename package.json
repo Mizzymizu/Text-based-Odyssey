@@ -18,7 +18,10 @@
     "express-session": "^1.17.3",
     "mysql": "^2.18.1",
     "mysql2": "^3.6.1",
-    "sequelize": "^6.33.0",
-    "ranvier": "^3.0.5"
+    "ranvier": "^3.0.5",
+    "sequelize": "^6.33.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }
