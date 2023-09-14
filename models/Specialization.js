@@ -21,12 +21,12 @@ Specialization.init (
         },
         skills: {
             type: DataTypes.STRING,
-            references: {
+            //references: {
                 model: 'skills',
                 key: 'id',
             },
         },
-    },
+    //},
     {
         sequelize,
         timestamps: false,
