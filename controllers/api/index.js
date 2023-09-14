@@ -5,6 +5,6 @@ const signupRoutes = require('./signupRoutes');
 
 router.use('/login', loginRoutes);
 //router.use('/characters', charactersRoutes);
-//router.use('/signup', signupRoutes);
+router.use('/signup', signupRoutes);
 
 module.exports = router;
