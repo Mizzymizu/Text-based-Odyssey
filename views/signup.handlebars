@@ -1,0 +1,25 @@
+{{!< main}}
+
+{{!-- Content specific to the signup page --}}
+<section class="bg-stone shadow-lg rounded-lg p-8 text-emerald">
+    <h2 class="text-3xl font-semibold mb-4">Sign Up</h2>
+    <form class="form signup-form">
+        <div class="form-group">
+            <label for="name-signup">Name:</label>
+            <input class="form-input" type="text" id="name-signup" name="name" />
+        </div>
+        <div class="form-group">
+            <label for="email-signup">Email:</label>
+            <input class="form-input" type="text" id="email-signup" name="email" />
+        </div>
+        <div class="form-group">
+            <label for="password-signup">Password:</label>
+            <input class="form-input" type="password" id="password-signup" name="password" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Sign Up</button>
+        </div>
+    </form>
+</section>
+
+<script src="/public/js/signup.js"></script>
