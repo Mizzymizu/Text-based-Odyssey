@@ -1,8 +1,5 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-const { Sequelize, Model, DataTypes } = require("sequelize");
-const sequelize = new Sequelize("sqlite::memory:");
-const { create } = require('../../models/User');
 
 router.post('/', async (req, res) => {
     try {
