@@ -21,10 +21,10 @@ Specialization.init (
         },
         skills: {
             type: DataTypes.STRING,
-            references: {
-                model: 'skills',
-                key: 'id',
-            },
+            // references: {
+            //     model: 'skills',
+            //     key: 'id',
+            // },
         },
     },
     {
