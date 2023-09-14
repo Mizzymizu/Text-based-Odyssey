@@ -1,5 +1,5 @@
-const Character = require('./character');
-const User = require('./user');
+const Character = require('./Character');
+const User = require('./User');
 
 // User hasMany Characters
 // Character belongs to User
