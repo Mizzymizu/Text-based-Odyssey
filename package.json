@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "text-based-odyssey",
   "version": "1.0.0",
   "description": "Welcome to Rust and Redemption: A Text-Based Oddyssey. This is a text-based adventure game that is played in the terminal. The game is a choose-your-own-adventure style game where the player is given a scenario and must choose from a list of options. The player's choices will affect the outcome of the game. The game is set in a post-apocalyptic world where the player must survive and make it to the end of the game. The game is written using MVC architecture such as Handlebars, Express, and Node.js.",
@@ -12,8 +11,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-=======
->>>>>>> main
   "dependencies": {
     "autoprefixer": "^10.4.15",
     "bcrypt": "^5.1.1",
@@ -24,7 +21,6 @@
     "express-session": "^1.17.3",
     "mysql": "^2.18.1",
     "mysql2": "^3.6.1",
-<<<<<<< HEAD
     "postcss-cli": "^10.1.0",
     "ranvier": "^3.0.5",
     "sequelize": "^6.33.0",
@@ -36,19 +32,4 @@
     "postcss": "^8.4.29",
     "tailwindcss": "^3.3.3"
   }
-=======
-    "sequelize": "^6.33.0"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "name": "text-based-odyssey",
-  "description": "Welcome to Rust and Redemption: A Text-Based Oddyssey. This is a text-based adventure game that is played in the terminal. The game is a choose-your-own-adventure style game where the player is given a scenario and must choose from a list of options. The player's choices will affect the outcome of the game. The game is set in a post-apocalyptic world where the player must survive and make it to the end of the game. The game is written using MVC architecture such as Handlebars, Express, and Node.js.",
-  "version": "1.0.0",
-  "main": "server.js",
-  "devDependencies": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
->>>>>>> main
 }
