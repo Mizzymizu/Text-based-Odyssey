@@ -11,6 +11,11 @@ Character.init(
         primaryKey: true,
         autoIncrement: true
         },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        
     },
     {
     sequelize,
