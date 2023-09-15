@@ -1,5 +1,7 @@
-const Character = require('./character');
+const Character = require('./Character');
 const User = require('./user');
+const Specialization = require('./specialization');
+const Skills = require('./skills');
 
 // User hasMany Characters
 // Character belongs to User
