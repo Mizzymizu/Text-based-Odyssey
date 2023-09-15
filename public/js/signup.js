@@ -1,44 +1,57 @@
 // Get a reference to the signup form and its elements
-const signupForm = document.querySelector('.signup-form');
-const nameInput = document.getElementById('name-signup');
-const emailInput = document.getElementById('email-signup');
-const passwordInput = document.getElementById('password-signup');
+const signupForm = document.querySelector(".signup-form");
+const usernameInput = document.getElementById("name-signup");
+const emailInput = document.getElementById("email-signup");
+const passwordInput = document.getElementById("password-signup");
 
-// Event listener for form submission
-signupForm.addEventListener('submit', async (event) => {
+const signUpFormHandler = async (event) => {
   event.preventDefault();
 
   // Get user input values
-  const name = nameInput.value.trim();
+  const username = usernameInput.value.trim();
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
-  // Perform basic client-side validation (you can add more)
-  if (!name || !email || !password) {
-    alert('Please fill in all fields');
-    return;
-  }
-
-  // Send a POST request to the server for signup
-  try {
-    const response = await fetch('/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, password }),
+  if (username && email && password) {
+    const response = await fetch("/api/signup", {
+      method: "POST",
+      body: JSON.stringify({ username, email, password }),
+      headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      // Redirect to a login page after successful signup
-      window.location.href = '/login';
+      document.location.replace("/");
     } else {
-      // Handle signup error (e.g., email already in use)
-      const data = await response.json();
-      alert(data.message);
+      alert("Failed to sign up.");
     }
-  } catch (error) {
-    console.error(error);
-    alert('An error occurred while signing up');
+  } else {
+    alert("Please fill out all fields.");
   }
-});
+};
+
+const loginFormHandler = async (event) => {
+  event.preventDefault();
+
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  if (email && password) {
+    const response = await fetch("/api/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.ok) {
+      document.location.replace("/");
+    } else {
+      alert("Failed to log in.");
+    }
+  } else {
+    alert("Please fill out all fields.");
+  }
+};
+
+// Event listener for form submission
+signupForm.addEventListener("submit", signUpFormHandler);
+loginForm.addEventListener("submit", loginFormHandler);
