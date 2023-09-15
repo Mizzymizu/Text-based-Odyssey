@@ -1,5 +1,21 @@
 {
+<<<<<<< HEAD
+  "name": "text-based-odyssey",
+  "version": "1.0.0",
+  "description": "Welcome to Rust and Redemption: A Text-Based Oddyssey. This is a text-based adventure game that is played in the terminal. The game is a choose-your-own-adventure style game where the player is given a scenario and must choose from a list of options. The player's choices will affect the outcome of the game. The game is set in a post-apocalyptic world where the player must survive and make it to the end of the game. The game is written using MVC architecture such as Handlebars, Express, and Node.js.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build:css": "postcss public/css/style.css -o public/css/style.css --env NODE_ENV"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+=======
+>>>>>>> main
   "dependencies": {
+    "autoprefixer": "^10.4.15",
     "bcrypt": "^5.1.1",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.3.1",
@@ -8,6 +24,19 @@
     "express-session": "^1.17.3",
     "mysql": "^2.18.1",
     "mysql2": "^3.6.1",
+<<<<<<< HEAD
+    "postcss-cli": "^10.1.0",
+    "ranvier": "^3.0.5",
+    "sequelize": "^6.33.0",
+    "sqlite": "^5.0.1",
+    "sqlite3": "^5.1.6",
+    "tailwind": "^4.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3"
+  }
+=======
     "sequelize": "^6.33.0"
   },
   "scripts": {
@@ -21,4 +50,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
+>>>>>>> main
 }
