@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "build:css": "postcss public/css/style.css -o public/css/style.css --env NODE_ENV"
+    "start": "node server.js",
+    "build:css": "postcss public/css/style.css -o public/css/style.css --env NODE_ENV",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
