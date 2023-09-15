@@ -33,6 +33,13 @@ app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
+
+// Serve the CSS file with the correct Content-Type header
+app.get('/public/css/style.css', (req, res) => {
+  res.header('Content-Type', 'text/css');
+  res.sendFile(path.join(__dirname, 'public', 'css', 'style.css'));
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
