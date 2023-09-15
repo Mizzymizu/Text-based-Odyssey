@@ -30,14 +30,6 @@ router.post('/', async (req, res) => {
     }
     });
 
-router.get('/check', withAuth, async (req, res) => {
-    try {
-        res.json({ loggedIn: true });
-    } catch (err) {
-        res.json({ loggedIn: false });
-    }
-    });
-
 router.post('/logout', withAuth, async (req, res) => {
     try {
         if (req.session.logged_in) {
