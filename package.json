@@ -25,7 +25,8 @@
     "ranvier": "^3.0.5",
     "sequelize": "^6.33.0",
     "sqlite": "^5.0.1",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "tailwind": "^4.0.0"
   },
   "devDependencies": {
     "postcss": "^8.4.29",
