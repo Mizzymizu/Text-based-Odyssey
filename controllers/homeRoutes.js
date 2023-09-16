@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   try {
     const user = getUserData(req); // Get the user data from the session cookie
     // You can perform any necessary data retrieval or processing here
-    res.render('homepage'); // Render the homepage.handlebars template
+    res.render('homepage', {user}); // Render the homepage.handlebars template
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Internal server error' });

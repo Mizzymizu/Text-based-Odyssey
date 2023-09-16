@@ -7,8 +7,8 @@ function setUserData(data) {
 }
 
 // Function to get the current user's data
-function getUserData() {
-  return userData;
+function getUserData(req) {
+  return req.session.user_id;
 }
 
 // Function to clear user data when the user logs out
