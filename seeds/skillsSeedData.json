@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Bandage",
+        "description": "Patch yourself up and restore some of your health!"
+    },
+    {
+        "name": "Enhanced Resistances",
+        "description": "Have an increased chance to avoid being inflicted by status abnormalities."
+    },
+    {
+        "name": "Stealth",
+        "description": "Significantly increases chances to avoid and sneak past hostile entities."
+    },
+    {
+        "name": "Tracking",
+        "description": "More likely to find food sources."
+    },
+    {
+        "name": "Study Time!",
+        "description": "Significantly increases the quality of rewards you receive from your activity."
+    },
+    {
+        "name": "Enhanced Cognition",
+        "description": "You receive additional insight about the environment/area you are in."
+    }
+]

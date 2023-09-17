@@ -14,12 +14,24 @@ const seedDatabase = async () => {
         returning: true,
     });
 
+    for (const character of characterSeedData) {
+        await Character.create({
+            ...character,
+        })
+    };
+
     for (const specialization of specializationSeedData) {
         await Specialization.create({
             ...specialization,
 
         });
-    }
+    };
+
+    for (const skills of skillsSeedData) {
+        await Skills.create({
+            ...skills,
+        })
+    };
 
     process.exit(0)
 }

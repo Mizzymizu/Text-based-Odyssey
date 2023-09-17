@@ -33,14 +33,37 @@ app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
+
+// Serve the CSS file with the correct Content-Type header
+app.get('/public/css/style.css', (req, res) => {
+  res.header('Content-Type', 'text/css');
+  res.sendFile(path.join(__dirname, 'public', 'css', 'style.css'));
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRoutes); 
 
 app.use(routes);
+
+app.post('/logout', (req, res) => {
+  try {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.clearCookie('connect.sid'); // Clear the session cookie
+        res.redirect('/'); // Redirect to the homepage
+      });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

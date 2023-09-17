@@ -1,0 +1,18 @@
+{{!< main}}
+{{!-- Content specific to the character creation page --}}
+
+<h1>Create Your Character</h1>
+
+<form action="/character-create" method="POST">
+  <div class="mb-4">
+    <label for="characterName" class="block text-emerald font-bold mb-2">Character Name:</label>
+    <input type="text" id="characterName" name="characterName" placeholder="Enter character name" required>
+  </div>
+
+  <!-- Add more input fields for attributes, race, class, etc., as needed -->
+
+  <button type="submit" class="start-button">Create Character</button>
+</form>
+
+
+<a href="/character-select" class="text-yellow hover:text-battleship-gray">Back to Character Selection</a>

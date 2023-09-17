@@ -6,23 +6,29 @@ class Character extends Model {}
 Character.init(
     {
         id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
         },
         name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'User',
+                key: 'id'
+            }
+        },
     },
     {
-    sequelize,
-    timeStamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'character'
+        sequelize,
+        timestamps: false, // Corrected option name
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'character'
     }
 );
 
