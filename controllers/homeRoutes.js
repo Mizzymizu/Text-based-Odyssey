@@ -1,12 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const { User } = require('../models'); // Adjust the import to match your models setup
+const { getUserData } = require('../utils/auth');
 
 // Define route handlers for your homepage, login, and signup pages
 router.get('/', async (req, res) => {
   try {
+    const user = getUserData(req); // Get the user data from the session cookie
     // You can perform any necessary data retrieval or processing here
-    res.render('homepage'); // Render the homepage.handlebars template
+    console.log(user);
+    res.render('homepage', {user}); // Render the homepage.handlebars template
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Internal server error' });

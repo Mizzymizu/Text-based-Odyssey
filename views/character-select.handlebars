@@ -1,0 +1,20 @@
+{{!< main}}
+
+{{!-- Content specific to the character select page --}}
+
+<h1>Character Select</h1>
+
+<!-- Button to create a new character -->
+<a href="/character-create" class="start-button">Create New Character</a>
+
+<!-- List user's characters here -->
+{{#if characters.length}}
+  <h2>Your Characters:</h2>
+  <ul>
+    {{#each characters}}
+      <li>{{this.name}}</li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>You have no characters yet.</p>
+{{/if}}

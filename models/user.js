@@ -49,10 +49,10 @@ User.init (
             }
         },
         sequelize,
-        timeStamps: false,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'User'
     }
 );
 

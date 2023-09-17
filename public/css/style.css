@@ -527,3 +527,28 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(138 126 114 / var(--tw-bg-opacity));
 }
+
+.create-button {
+  margin-top: 16px;
+  padding: 8px 16px; /* Adjust padding values as needed */
+  display: inline-block; /* Ensure proper alignment with text */
+}
+
+.start-button {
+  background-color: #EAB308;
+  color: #10B981;
+  padding: 10px 20px; /* Adjust padding values as needed */
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #878787; /* Change the background color on hover */
+}
