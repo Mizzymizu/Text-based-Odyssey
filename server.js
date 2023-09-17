@@ -50,6 +50,21 @@ app.use('/', homeRoutes);
 
 app.use(routes);
 
+app.post('/logout', (req, res) => {
+  try {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.clearCookie('connect.sid'); // Clear the session cookie
+        res.redirect('/'); // Redirect to the homepage
+      });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
