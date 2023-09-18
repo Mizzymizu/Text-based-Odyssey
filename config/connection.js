@@ -17,6 +17,6 @@ if (process.env.JAWSDB_URL) {
       logging: true
     }
   );
-}
+};
 
 module.exports = sequelize;
