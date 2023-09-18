@@ -23,7 +23,7 @@ const seedDatabase = async () => {
     for (const specialization of specializationSeedData) {
         await Specialization.create({
             ...specialization,
-            
+
         });
     };
 
@@ -33,7 +33,7 @@ const seedDatabase = async () => {
         })
     };
 
-    process.exit(0);
+    process.exit(0)
 };
 
 seedDatabase();
