@@ -1,62 +1,37 @@
-# Rust-and-Redemption
+# Rust and Redemption: A Text-Based Oddyssey
 
-## Description
+Rust and Redemption is an exciting text-based adventure game designed to be played in the terminal. It captures the essence of the classic 'choose-your-own-adventure' style, immersing players in a post-apocalyptic world filled with challenges, choices, and consequences.
 
-Welcome to Rust and Redemption: A Text-Based Oddyssey. This is a text-based adventure game that is played in the terminal. The game is a choose-your-own-adventure style game where the player is given a scenario and must choose from a list of options. The player's choices will affect the outcome of the game. The game is set in a post-apocalyptic world where the player must survive and make it to the end of the game. The game is written using MVC architecture such as Handlebars, Express, and Node.js.
+## Game Overview
 
-## Table of Contents
+In Rust and Redemption, you'll embark on a perilous journey, where your decisions matter. With each scenario presented, you'll face critical choices that will significantly impact the outcome of your adventure. Will you survive in this harsh world and reach the end of the game?
 
-* [Installation](#installation)
+## Technology Stack
 
-* [Usage](#usage)
+- **MVC Architecture:** Our game is built upon a robust Model-View-Controller (MVC) architecture, ensuring a structured and organized codebase.
 
-* [License](#license)
+- **Handlebars:** We leverage Handlebars, a powerful templating engine, to create dynamic and engaging game content.
 
-* [Contributors](#contributors)
+- **Express:** Our server is powered by Express, a fast and minimalist web framework for Node.js, enabling smooth interactions between players and the game.
 
-* [Tests](#tests)
+- **Node.js:** We utilize Node.js to bring our game to life, handling server-side logic and communication.
 
-* [Questions](#questions)
+## Project Progress
 
-## Installation
+While we aimed to deliver a complete text-based adventure experience, we've faced some challenges that prevented us from achieving our initial goals. However, we're proud to share our progress so far, including the implementation of the login and welcome page. These accomplishments showcase the potential for an immersive and captivating gaming experience.
 
-To install necessary dependencies, run the following command:
+## Getting Started
 
-```
-npm i
-```
+To embark on your adventure in Rust and Redemption, follow the installation and setup instructions below.
 
-## Usage
+[Not available at this time.]
 
-To run the game, run the following command:
+## Contributing
 
-```
-node server.js
-```
+We welcome contributions from fellow adventurers! If you'd like to join us on this journey to expand and improve Rust and Redemption, please check our [Contribution Guidelines](link-to-guidelines) for more information.
 
-## License
+## Acknowledgments
 
-This project is licensed under the MIT license.
+We'd like to express our gratitude to our team members, mentors, and the open-source community for their support and guidance throughout this project.
 
-## Contributors
-
-* [Dan Obello](
-
-* [Angie Cruz](
-
-* [Donovan Walker](
-
-
-## Tests
-
-To run tests, run the following command:
-
-```
-npm test
-```
-
-## Questions
-
-If you have any questions about the repo, open an issue or contact me directly at
-
-You can find more of our work at
+Thank you for joining us on this adventure in Rust and Redemption. We hope you enjoy the game and look forward to your feedback and contributions!
