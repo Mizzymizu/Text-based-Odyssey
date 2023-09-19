@@ -55,4 +55,4 @@ router.post('/logout', (req, res) => {
     }
 })
 
-module.router = router;
+module.exports = router;
