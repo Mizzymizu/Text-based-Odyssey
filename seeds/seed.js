@@ -23,7 +23,6 @@ const seedDatabase = async () => {
     for (const specialization of specializationSeedData) {
         await Specialization.create({
             ...specialization,
-
         });
     };
 
