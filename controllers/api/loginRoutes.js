@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
     }
     });
 
-router.post('/logout', withAuth, async (req, res) => {
+router.post('/logout',  async (req, res) => {
     try {
         if (req.session.logged_in) {
         req.session.destroy(() => {
