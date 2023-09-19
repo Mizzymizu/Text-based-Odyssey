@@ -46,7 +46,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.use('/', homeRoutes); 
+// app.use('/', homeRoutes); 
 
 app.use(routes);
 
