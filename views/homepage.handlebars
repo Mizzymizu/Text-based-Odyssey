@@ -1,4 +1,4 @@
-{{!< main}}
+{{!-- {{!< main}} --}}
 
 {{!-- Content specific to the homepage --}}
 
@@ -6,16 +6,14 @@
     <h2 class="text-3xl font-semibold mb-4"></h2>
     <p class="mb-8"></p>
     {{!-- If the user is logged in, show their name and a logout button--}}
-    {{#if user}}
-        <p class="mb-8">Welcome, {{user.username}}!</p>
+    {{#if loggedIn}}
+        <p class="mb-8">Welcome, Marauder!</p>
         <form action="/logout" method="POST">
     <button type="submit" class="bg-yellow hover:bg-battership-gray text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
       Logout
     </button>
-    {{/if}}
-    {{!-- If the user is not logged in, show the login and signup buttons --}}
-    {{#unless user}}
-        <div class="space-x-4 text-center">
+    {{else}}
+            <div class="space-x-4 text-center">
             <a href="/login" class="bg-yellow hover:bg-battership-gray text-white px-4 py-2 rounded-full transition duration-300 ease-in-out">
                 Login
             </a>
@@ -23,10 +21,12 @@
                 Sign Up
             </a>
         </div>
-    {{/unless}}
+    {{/if}}
+    {{!-- If the user is not logged in, show the login and signup buttons --}}
+
     <div class="mt-8 text-center">
         {{!-- If the user is logged in, show the start game button --}}
-        {{#if user}}
+        {{#if loggedIn}}
             <a href="/character-select" class="bg-yellow hover:bg-battership-gray  text-white px-6 py-3 rounded-full text-xl font-semibold transition duration-300 ease-in-out">
                 Start Game
             </a>
