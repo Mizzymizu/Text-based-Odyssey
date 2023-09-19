@@ -1,7 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const { User } = require('../models'); // Adjust the import to match your models setup
-// const { withAuth } = require('../utils/auth')
+const router = require('express').Router();
+const { User, Character } = require('../models'); // Adjust the import to match your models setup
+const { withAuth } = require('../utils/auth')
 
 // Define route handlers for your homepage, login, and signup pages
 router.get('/', async (req, res) => {
@@ -12,6 +11,28 @@ router.get('/', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+// GET ALL CHARACTERS
+router.get('/characters', withAuth, async (req, res) => {
+  try {
+    const characterData = await Character.findAll({
+      where: {
+        user_id: req.session.user_id,
+      }
+    });
+
+    const characters = characterData.get({ plain: true })
+    res.render('character-select', {
+      ...characters, 
+      logged_in: req.session.logged_in,
+    })
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/create' , async (req, res) => {
+  res.render('character-create');
+})
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
